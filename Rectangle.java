@@ -1,7 +1,6 @@
 public class Rectangle {
     private int x1, y1, x2, y2;
     private boolean filled;
-
    /*public int getX1() {
         return x1;
     }
