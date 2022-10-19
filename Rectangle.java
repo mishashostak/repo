@@ -1,7 +1,18 @@
 public class Rectangle {
     private int x1, y1, x2, y2;
     private boolean filled;
-   /*public int getX1() {
+
+    public Rectangle(int initialx1,int initialy1,int initialx2,int initialy2, boolean initialFilled){
+        x1 = setX1(initialx1);
+        y1 = setY1(initialy1);
+        x2 = setX2(initialx2);
+        y2 = setY2(initialy2);
+        filled = setFilled(initialFilled);
+    }
+    public Rectangle(){
+        this(0,0,0, 0, false);
+    }
+    public int getX1() {
         return x1;
     }
     public int getY1() {
@@ -15,7 +26,7 @@ public class Rectangle {
     }
     public boolean getFilled() {
         return filled;
-    }*/
+    }
 
     public int setX1(int newx1) {
         if (newx1 < 0) {
@@ -63,13 +74,6 @@ public class Rectangle {
     }
     public String toString() {
         return "("+x1+","+y1+"), ("+x2+","+y2+"), filled = " + filled;
-    }
-    public Rectangle(int initialx1,int initialy1,int initialx2,int initialy2, boolean initialFilled){
-        x1 = setX1(initialx1);
-        y1 = setY1(initialy1);
-        x2 = setX2(initialx2);
-        y2 = setY2(initialy2);
-        filled = setFilled(initialFilled);
     }
 
 }
