@@ -2,8 +2,8 @@ public class Rectangle extends FillableShape{
     public static int rectCount = 0;
     
     public Rectangle(int initialx1,int initialy1,int initialx2,int initialy2, boolean initialFilled){
+        super (initialx1,initialy1,initialx2,initialy2,initialFilled);
         rectCount++;
-        setVars(initialx1,initialy1,initialx2,initialy2,initialFilled);
     }
     public Rectangle(){
         this(0,0,0, 0, false);

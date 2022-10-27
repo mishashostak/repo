@@ -2,8 +2,8 @@ public class Oval extends FillableShape{
     public static int ovalCount = 0;
     
     public Oval(int initialx1,int initialy1,int initialx2,int initialy2, boolean initialFilled){
+        super (initialx1,initialy1,initialx2,initialy2,initialFilled);
         ovalCount++;
-        setVars(initialx1,initialy1,initialx2,initialy2,initialFilled);
     }
     public Oval(){
         this(0,0,0, 0, false);
