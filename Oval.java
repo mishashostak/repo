@@ -1,11 +1,9 @@
-public class Oval extends fillableShape{
+public class Oval extends FillableShape{
+    public static int ovalCount = 0;
+    
     public Oval(int initialx1,int initialy1,int initialx2,int initialy2, boolean initialFilled){
         ovalCount++;
-        setX1(initialx1);
-        setY1(initialy1);
-        setX2(initialx2);
-        setY2(initialy2);
-        setFilled(initialFilled);
+        setVars(initialx1,initialy1,initialx2,initialy2,initialFilled);
     }
     public Oval(){
         this(0,0,0, 0, false);

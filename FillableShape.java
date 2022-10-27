@@ -1,8 +1,14 @@
-public class fillableShape {
+public class FillableShape {
     private int x1, y1, x2, y2;
     private boolean filled;
-    public static int rectCount = 0, ovalCount = 0;
 
+    public setVars(int initialx1,int initialy1,int initialx2,int initialy2, boolean initialFilled) {
+        setX1(initialx1);
+        setY1(initialy1);
+        setX2(initialx2);
+        setY2(initialy2);
+        setFilled(initialFilled);
+    }
     public int getTopLeftX() {
         return Math.min(x1, x2);
     }
