@@ -13,7 +13,7 @@ public class Main {
         System.out.printf("%nrect upper left y: %d", r.getTopLeftY());
         System.out.printf("%nrect width: %d", r.getWidth());
         System.out.printf("%nrect height: %d", r.getHeight());
-        System.out.printf("%nrect area: %f%n", r.calcArea());
+        System.out.printf("%nrect area: %f", r.calcArea());
         System.out.printf("%nrect1 is square?: %b%n", r.isSquare());
 
         Rectangle r1 = new Rectangle(70,70,190,190,true);
@@ -24,7 +24,7 @@ public class Main {
         System.out.printf("%nrect1 width: %d", r1.getWidth());
         System.out.printf("%nrect1 height: %d", r1.getHeight());
         System.out.printf("%nrect1 area: %f", r1.calcArea());
-        System.out.printf("%nrect1 is square?: %b%n", r1.isSquare());
+        System.out.printf("%nrect1 is square?: %b", r1.isSquare());
         System.out.printf("%nrect1 is overlapping rect?: %b%n", r1.isOverlapping(r, r1));
 
         Oval o = new Oval(200, 200, 310, 310, true);
