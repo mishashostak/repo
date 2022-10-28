@@ -8,7 +8,7 @@ public class Main {
         r.setY2(50);
         r.setFilled(true);
         System.out.printf("%n%s", r.toString());
-        System.out.printf("%nrect count: %d", r.getRectCount());
+        System.out.printf("%nrect count: %d", Rectangle.getRectCount());
         System.out.printf("%nrect upper left x: %d", r.getTopLeftX());
         System.out.printf("%nrect upper left y: %d", r.getTopLeftY());
         System.out.printf("%nrect width: %d", r.getWidth());
@@ -18,7 +18,7 @@ public class Main {
 
         Rectangle r1 = new Rectangle(70,70,190,190,true);
         System.out.printf("%n%s", r1.toString());
-        System.out.printf("%nrect1 count: %d", r1.getRectCount());
+        System.out.printf("%nrect1 count: %d", Rectangle.getRectCount());
         System.out.printf("%nrect1 upper left x: %d", r1.getTopLeftX());
         System.out.printf("%nrect1 upper left y: %d", r1.getTopLeftY());
         System.out.printf("%nrect1 width: %d", r1.getWidth());
@@ -29,7 +29,7 @@ public class Main {
 
         Oval o = new Oval(200, 200, 310, 310, true);
         System.out.printf("%n%s", o.toString());
-        System.out.printf("%noval count: %d", o.getOvalCount());
+        System.out.printf("%noval count: %d", Oval.getOvalCount());
         System.out.printf("%noval upper left x: %d", o.getTopLeftX());
         System.out.printf("%noval upper left y: %d", o.getTopLeftY());
         System.out.printf("%noval width: %d", o.getWidth());
@@ -39,7 +39,7 @@ public class Main {
 
         Oval o1 = new Oval(300,300,400,450,false);
         System.out.printf("%n%s", o1.toString());
-        System.out.printf("%noval count: %d", o1.getOvalCount());
+        System.out.printf("%noval count: %d", Oval.getOvalCount());
         System.out.printf("%noval upper left x: %d", o1.getTopLeftX());
         System.out.printf("%noval upper left y: %d", o1.getTopLeftY());
         System.out.printf("%noval width: %d", o1.getWidth());

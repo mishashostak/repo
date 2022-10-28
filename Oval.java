@@ -8,7 +8,7 @@ public class Oval extends FillableShape{
     public Oval(){
         this(0,0,0, 0, false);
     }
-    public int getOvalCount() {
+    public static int getOvalCount() {
         return ovalCount;
     }
     public boolean isCircle() {

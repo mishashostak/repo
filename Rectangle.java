@@ -8,7 +8,7 @@ public class Rectangle extends FillableShape{
     public Rectangle(){
         this(0,0,0, 0, false);
     }
-    public int getRectCount() {
+    public static int getRectCount() {
         return rectCount;
     }
     public boolean isSquare() {
