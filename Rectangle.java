@@ -1,26 +1,31 @@
+//This class defines all dependent attributes of a desired shape; Rectangle
+
 public class Rectangle extends FillableShape{
     public static int rectCount = 0;
     
-    public Rectangle(int initialx1,int initialy1,int initialx2,int initialy2, boolean initialFilled){
-        super (initialx1,initialy1,initialx2,initialy2,initialFilled);
+    // Parameterized constructor method
+    public Rectangle(int initx1,int inity1,int initx2,int inity2, boolean initFilled){
+        super (initx1,inity1,initx2,inity2,initFilled);
         rectCount++;
     }
+    // No-argument constructor method
     public Rectangle(){
         this(0,0,0, 0, false);
     }
+
+    // Accessor for rectCount instance variable
     public static int getRectCount() {
         return rectCount;
     }
+    
+    //Method to return the boolean value of rectangular subset: square
     public boolean isSquare() {
         return (getWidth() == getHeight());
     }
+    
+    //Returns the calculated Area of the Oval/Circle
+    @Override
     public double calcArea() {
         return getWidth()*getHeight();
-    }
-    public boolean isOverlapping (Rectangle a, Rectangle b) {
-        return (Math.max(Math.min(a.getX2(), b.getX2())
-        - Math.max(a.getX1(), b.getX1()), 0)
-        * Math.max(Math.min(a.getY2(), b.getY2())
-        - Math.max(a.getY1(), b.getY1()), 0) > 0);
     }
 }
