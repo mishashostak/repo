@@ -1,8 +1,4 @@
 /*
-import java.util.*;
-import java.util.concurrent.LinkedBlockingQueue;
-*/
-/*
 Author: Misha Shostak; ICS4U1
 GUI
 Standard Main class **(Currently being utilised exclusively for Debugging)**
@@ -61,48 +57,8 @@ public class Main {
         System.out.printf("%noval area: %f", o1.calcArea());
         System.out.printf("%noval is circle?: %b", o1.isCircle());
         System.out.printf("%noval is overlapping?: %b%n%n", o1.isOverlapping(o, o1));
+
+        Rand2DArr r = new Rand2DArr();
+        r.randRectArr();
     }
-
-/*
-    //Method for 3-3; Two-dimensional Arrays with randomized integers in each element
-    public String randRectArr() {
-        int[][] randArr;
-        
-        Random random = new Random();
-        Scanner input = new Scanner( System.in );
-        int rows, cols, rand=0;
- 
-        System.out.print("Input the height value of the rectangular 2-D Array:\n");
-        rows = input.nextInt();
- 
-        System.out.print("Input the width value of the rectangular 2-D Array:\n");
-        cols = input.nextInt();
- 
-        randArr = new int[rows][cols]; 
-
-        int[][] randArrMutate = randArr;
-
-        //change to method
-        for (int i=0; i<=rows-1; i++){
-            for (int j=0; j<=cols-1; j++){
-                while (true){
-                    rand = random.nextInt(100);
-                    if(rand !=0) break;
-                }
-                randArrMutate[i][j] = rand;
-            }
-        }
-        printArr(rows, cols, randArrMutate)
-    }
-
-    public String printArr(rows, cols, randArrMutate){
-        
-        for (int i=0; i<=rows-1; i++){
-            for (int j=0; j<=cols-1; j++){
-                StringBuilder str = new StringBuilder(randArrMutate[i][j].toString());
-            }
-            System.out.println(randArrMutate[i][cols] + randArrMutate[i][cols]
-        }
-    }
-*/
 }
