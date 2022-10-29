@@ -1,5 +1,6 @@
-//This class defines all dependent attributes of a desired shape; Rectangle
-
+/*
+This class defines all dependent attributes of a desired shape; Rectangle
+*/
 public class Rectangle extends FillableShape{
     public static int rectCount = 0;
     

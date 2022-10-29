@@ -1,5 +1,6 @@
-//This class defines all dependent attributes of a desired shape; Oval
-
+/*
+This class defines all dependent attributes of a desired shape; Oval
+*/
 public class Oval extends FillableShape{
     public static int ovalCount = 0;
     
@@ -10,7 +11,7 @@ public class Oval extends FillableShape{
     }
     // No-argument constructor method
     public Oval(){
-        this(0,0,0, 0, false);
+        this(0, 0, 0, 0, false);
     }
 
     // Accessor for ovalCount instance variable

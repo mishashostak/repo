@@ -1,5 +1,6 @@
-//This abstract class defines all basic independent attributes of a shape
-
+/*
+This abstract class defines all basic independent attributes of a shape
+*/
 public abstract class FillableShape {
     private int x1, y1, x2, y2;
     private boolean filled;
@@ -98,17 +99,17 @@ public abstract class FillableShape {
     
     //An abstract method to Calculate the Area of the fillable shape
     public abstract double calcArea();
-    
-    //Standard toString() method
-    public String toString() {
-        return "("+x1+","+y1+"), ("+x2+","+y2+"), filled = " + filled;
-    } 
 
-        //Method to return the boolean value of overlapping shapes
+    //Method to return the boolean value of overlapping shapes
     public boolean isOverlapping (FillableShape a, FillableShape b) {
         return (Math.max(Math.min(a.getX2(), b.getX2())
         - Math.max(a.getX1(), b.getX1()), 0)
         * Math.max(Math.min(a.getY2(), b.getY2())
         - Math.max(a.getY1(), b.getY1()), 0) > 0);
-    }
+    }   
+
+    //Standard toString() method
+    public String toString() {
+        return "("+x1+","+y1+"), ("+x2+","+y2+"), filled = " + filled;
+    } 
 }
