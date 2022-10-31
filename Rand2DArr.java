@@ -1,18 +1,17 @@
 import java.util.*;
-import java.util.concurrent.LinkedBlockingQueue;
 
 //Program for 3-3; Two-dimensional Arrays with randomized integers in each element
 public class Rand2DArr{
     public void randRectArr() {
-    Scanner input = new Scanner( System.in );
-        
-    System.out.println("Input the height value of the rectangular 2-D Array:");
+    try (Scanner input = new Scanner( System.in )) {
+        System.out.println("Input the height value of the rectangular 2-D Array:");
         int rows = input.nextInt();
  
         System.out.println("Input the width value of the rectangular 2-D Array:");
         int cols = input.nextInt();
  
         inpRandIntoArr(rows,cols);
+    }
     }
 
     public void inpRandIntoArr(int rows, int cols){

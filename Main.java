@@ -58,7 +58,7 @@ public class Main {
         System.out.printf("%noval is circle?: %b", o1.isCircle());
         System.out.printf("%noval is overlapping?: %b%n%n", o1.isOverlapping(o, o1));
 
-        Rand2DArr r = new Rand2DArr();
-        r.randRectArr();
+        Rand2DArr rA = new Rand2DArr();
+        rA.randRectArr();
     }
 }
