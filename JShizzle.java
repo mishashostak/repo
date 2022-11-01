@@ -1,3 +1,4 @@
+/*
 public class JShizzle extends VirtualAgent {
     public JShizzle(String text) {
 //body
@@ -8,3 +9,4 @@ public class JShizzle extends VirtualAgent {
 //body
     }
 }
+*/

@@ -37,7 +37,7 @@ public class Rand2DArr{
             for (int b=0; b<=cols-1; b++){
                 maxInt = Math.max(randArr[a][b],maxInt);
                 minInt = Math.min(randArr[a][b],minInt);
-                System.out.print("|"+randArr[a][b]);
+                System.out.printf("|%2d",randArr[a][b]);
             }
             System.out.printf("%s%n","|");
         }
