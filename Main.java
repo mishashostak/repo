@@ -6,8 +6,7 @@ Standard Main class **(Currently being utilised exclusively for Debugging)**
 public class Main {
     public static void main(String[] args) {
         System.out.printf("%n");
-        
-        /* 
+         
         Rectangle r = new Rectangle();
         r.setX1(4);
         r.setY1(4);
@@ -60,11 +59,5 @@ public class Main {
         System.out.printf("%noval is circle?: %b", o1.isCircle());
         System.out.printf("%noval is overlapping?: %b%n%n", o1.isOverlapping(o, o1));
 
-        Rand2DArr rA = new Rand2DArr();
-        rA.randRectArr();
-        */
-
-        JShizzle J = new JShizzle(null);
-        System.out.println("/n"+JShizzle.right());
     }
 }
