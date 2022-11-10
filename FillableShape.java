@@ -52,7 +52,7 @@ public abstract class FillableShape {
     }
 
     // Mutator for x1 instance variable
-    public int setX1(int newx1) {
+    public void setX1(int newx1) {
         if (newx1 < 0) {
             System.err.println( "Attempt to set x1 coordinate negative ignored, setting to 0 by default." );
             x1 = 0;
@@ -60,7 +60,6 @@ public abstract class FillableShape {
         else {
             x1 = newx1;
         }
-        return newx1;
     }
     // Mutator for y1 instance variable
     public void setY1(int newy1) {

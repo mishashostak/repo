@@ -7,17 +7,17 @@ public class ThreeOneN2 {
 
     //develops the string array of names inputted
     public static void strArr() {
-        Scanner input = new Scanner( System.in );
-        
-        System.out.println("Input the amount of friends' names:");   
-        String[] friends = new String[input.nextInt()];
-        
-        System.out.printf("%nInput %d names:\n", friends.length);
-        for (int i = 0; i<=friends.length-1; i++) {
-            if (i==0) input.nextLine();
-            friends[i] = new String(input.nextLine());
+        try (Scanner input = new Scanner( System.in )) {
+            System.out.println("Input the amount of friends' names:");   
+            String[] friends = new String[input.nextInt()];
+            
+            System.out.printf("%nInput %d names:\n", friends.length);
+            for (int i = 0; i<=friends.length-1; i++) {
+                if (i==0) input.nextLine();
+                friends[i] = new String(input.nextLine());
+            }
+            checkNamArr(friends);
         }
-        checkNamArr(friends);
     }
 
     //checks if the additionally inputted name is contained within array
