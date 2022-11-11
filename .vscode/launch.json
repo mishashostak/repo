@@ -9,6 +9,20 @@
             "name": "Launch ThreeTwoN2",
             "request": "launch",
             "mainClass": "ThreeTwoN2",
+            "projectName": "repo-1_b17d5b68"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThreeOneN2",
+            "request": "launch",
+            "mainClass": "ThreeOneN2",
+            "projectName": "repo-1_b17d5b68"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThreeTwoN2",
+            "request": "launch",
+            "mainClass": "ThreeTwoN2",
             "projectName": "repo_424fb598"
         },
         {
