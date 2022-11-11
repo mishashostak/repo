@@ -36,7 +36,7 @@ public class ThreeTwoN2 {
             nArr = new String[Integer.parseInt(hold)];
             System.out.printf("%nInput %d different integers:%n", Integer.parseInt(hold));
             String plac = input.nextLine();
-            for (int i = 0; i<=nArr.length-1; i++) {
+            for (int i = 0; i<nArr.length; i++) {
                 while(Arrays.asList(nArr).contains(plac)) {
                     System.out.println("\nI said DIFFERENT!!! ...god you're frustrating\nTry again and don't be an idiot this time:");
                     plac = input.nextLine();
@@ -62,10 +62,15 @@ public class ThreeTwoN2 {
      * @return String - The String representation of the String Array
      */
     public static String arrToString() {
+        Arrays.sort(nArr);
         StringBuilder strB = new StringBuilder("\n[");
         for (String st : nArr){
             strB.append(st+", ");
         }
         return strB.substring(0, strB.toString().length()-2) + "]\n";
     }
+
+    //could've just done:
+    //Arrays.sort(nArr)
+    //return Arrays.toString(nArr);
 }
