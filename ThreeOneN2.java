@@ -14,7 +14,7 @@ public class ThreeOneN2 {
             System.out.printf("%nInput %d names:\n", friends.length);
             for (int i = 0; i<=friends.length-1; i++) {
                 if (i==0) input.nextLine();
-                friends[i] = new String(input.nextLine());
+                friends[i] = input.nextLine();
             }
             checkNamArr(friends);
         }
