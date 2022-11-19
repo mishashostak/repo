@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ThreeFour",
+            "request": "launch",
+            "mainClass": "ThreeFour",
+            "projectName": "repo_a529ea9c"
+        },
+        {
+            "type": "java",
             "name": "Launch ThreeOneN2",
             "request": "launch",
             "mainClass": "ThreeOneN2",
