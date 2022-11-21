@@ -53,7 +53,7 @@ public class ThreeTwoN2 {
                 }
                 plac = input.nextLine();
             }
-        } 
+        }
     }
 
     /**
@@ -62,7 +62,11 @@ public class ThreeTwoN2 {
      * @return String - The String representation of the String Array
      */
     public static String arrToString() {
+<<<<<<< HEAD
+        Arrays.sort()
+=======
         Arrays.sort(nArr);
+>>>>>>> 317f04edb989fe58f3f26a11b6b48278a6ec6e08
         StringBuilder strB = new StringBuilder("\n[");
         for (String st : nArr){
             strB.append(st+", ");
