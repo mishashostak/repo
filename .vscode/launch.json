@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SortingTests",
+            "request": "launch",
+            "mainClass": "SortingTests",
+            "projectName": "repo_a529ea9c"
+        },
+        {
+            "type": "java",
             "name": "Launch SelectionSortTest",
             "request": "launch",
             "mainClass": "SelectionSortTest",
