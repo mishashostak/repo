@@ -1,6 +1,15 @@
 import java.util.Random;
 import java.util.Arrays;
 
+/**
+ * This class defines https://www.vik-20.com/java/3-4-the-arraylist-collection/
+ * 3-4 "The ArrayList Collection"
+ * You Try: Question 2
+ * 
+ * @author Misha Shostak
+ * 
+ * @version 11/19/2022
+ */
 public class SelectionSort{
     private int[] data;
     public static final int RANDOM = 0;
