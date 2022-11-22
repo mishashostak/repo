@@ -9,6 +9,13 @@
             "name": "Launch SortingTests",
             "request": "launch",
             "mainClass": "SortingTests",
+            "projectName": "repo-5_b17d5b6c"
+        },
+        {
+            "type": "java",
+            "name": "Launch SortingTests",
+            "request": "launch",
+            "mainClass": "SortingTests",
             "projectName": "repo_a529ea9c"
         },
         {
