@@ -46,48 +46,53 @@ public class QuickSort{
         }
     }
 
-    // method to find the partition position
-    static int partition(int array[], int low, int high) {
+    // helper method to call the quick sort method
+    public void callQuickSort() {
+        quickSorting(0, data.length-1);
+    }
+
+    // helper method to find the partition position
+    private int partition(int leftindex, int rightindex) {
         // choose the rightmost element as pivot
-        int pivot = array[high];
+        int pivot = data[rightindex];
         // pointer for greater element
-        int i = (low - 1);
+        int i = (leftindex - 1);
 
         // compare each element with pivot
-        for (int j = low; j < high; j++) {
-            if (array[j] <= pivot) {
+        for (int j = leftindex; j < rightindex; j++) {
+            if (data[j] <= pivot) {
                 // if element smaller than pivot is found
                 // swap it with the greater element pointed by i
                 i++;
 
                 // swapping element at i with element at j
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                int temp = data[i];
+                data[i] = data[j];
+                data[j] = temp;
             }
         }
         // swap the pivot element with the greater element specified by i
-        int temp = array[i + 1];
-        array[i + 1] = array[high];
-        array[high] = temp;
+        int temp = data[i + 1];
+        data[i + 1] = data[rightindex];
+        data[rightindex] = temp;
 
         // return the position from where partition is done
         return (i + 1);
     }
 
     // this method defines the Quick Sort algorithm (Invented by Tony Hoare)
-    static void quickSorting(int array[], int low, int high) {
-        if (low < high) {
+    private void quickSorting(int leftindex, int rightindex) {
+        if (leftindex < rightindex) {
             // find pivot element such that
             // elements smaller than pivot are on the left
             // elements greater than pivot are on the right
-            int pi = partition(array, low, high);
+            int pi = partition(leftindex, rightindex);
             
             // recursive call on the left of pivot
-            quickSorting(array, low, pi - 1);
+            quickSorting(leftindex, pi - 1);
 
             // recursive call on the right of pivot
-            quickSorting(array, pi + 1, high);
+            quickSorting(pi + 1, rightindex);
         }
     }
 
