@@ -9,7 +9,7 @@
 public class SortingTests {
     public static void main(String[] args) {
         long start, finish;
-/* 
+
         // create object to perform Selection Sort
         SelectionSort selectArr = new SelectionSort( 100000, SelectionSort.DESCENDING );
         
@@ -35,7 +35,7 @@ public class SortingTests {
         // reset
         start=0;
         finish=0;
-*/
+
         // create object to perform Bubble Sort
         QuickSort quickArr = new QuickSort( 10000000, QuickSort.ASCENDING );
 
