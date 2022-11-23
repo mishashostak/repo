@@ -11,7 +11,7 @@ import java.util.Arrays;
  * @version 11/22/2022
  */
 public class QuickSort{
-    private int[] data;
+    public int[] data;
     public static final int RANDOM = 0;
     public static final int ASCENDING = 1;
     public static final int DESCENDING = 2;
@@ -45,56 +45,46 @@ public class QuickSort{
             }
         }
     }
-
-    // helper method to call the quick sort method
-    public void callQuickSort() {
-        quickSorting(0, data.length-1);
+    public void quickSort( ) {
+        quickSort( 0, data.length - 1 );
+    }
+     
+    // PRIVATE recursive method to perform the quick sort, 
+    // requires left and right indices (internal details).
+    private void quickSort(int leftIndex, int rightIndex) {
+        // base case: if subarray size is 1, then it's sorted
+        if ( rightIndex - leftIndex <= 0 ) 
+            return;
+        // Otherwise, there are 2 or more elements in this subarray
+        else {
+            // Partition the subarray
+            int indexOfPivot = partitionIt( leftIndex, rightIndex );
+            
+            // Sort the left side
+            quickSort( leftIndex, indexOfPivot - 1 );
+            
+            // Sort the right side
+            quickSort( indexOfPivot, rightIndex );  
+        }
     }
 
-    // helper method to find the partition position
-    private int partition(int leftindex, int rightindex) {
-        // choose the rightmost element as pivot
-        int pivot = data[rightindex];
-        // pointer for greater element
-        int i = (leftindex - 1);
-
-        // compare each element with pivot
-        for (int j = leftindex; j < rightindex; j++) {
-            if (data[j] <= pivot) {
-                // if element smaller than pivot is found
-                // swap it with the greater element pointed by i
-                i++;
-
-                // swapping element at i with element at j
-                int temp = data[i];
-                data[i] = data[j];
-                data[j] = temp;
+    // helper method to partition the array
+    private int partitionIt(int leftIndex, int rightIndex) {
+        int pivotValue = data[(leftIndex + rightIndex) / 2];
+        while ( leftIndex <= rightIndex) {
+            while ( data[leftIndex] < pivotValue )
+                leftIndex++;
+            while ( data[rightIndex] > pivotValue )
+                rightIndex--;
+            if ( leftIndex <= rightIndex ) {
+                swap( leftIndex, rightIndex );
+                leftIndex++;
+                rightIndex--;
             }
         }
-        // swap the pivot element with the greater element specified by i
-        int temp = data[i + 1];
-        data[i + 1] = data[rightindex];
-        data[rightindex] = temp;
-
-        // return the position from where partition is done
-        return (i + 1);
-    }
-
-    // this method defines the Quick Sort algorithm (Invented by Tony Hoare)
-    private void quickSorting(int leftindex, int rightindex) {
-        if (leftindex < rightindex) {
-            // find pivot element such that
-            // elements smaller than pivot are on the left
-            // elements greater than pivot are on the right
-            int pi = partition(leftindex, rightindex);
-            
-            // recursive call on the left of pivot
-            quickSorting(leftindex, pi - 1);
-
-            // recursive call on the right of pivot
-            quickSorting(pi + 1, rightindex);
-        }
-    }
+        
+        return leftIndex;
+    } 
 
     // helper method to swap values in two data elements
     private void swap( int first, int second ) {
