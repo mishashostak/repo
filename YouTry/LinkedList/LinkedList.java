@@ -1,4 +1,4 @@
-package LinkedList;
+
 
 class LinkedList<T> implements LinkedListADT<T> {
     private ListNode<T> front = null;

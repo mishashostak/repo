@@ -1,4 +1,4 @@
-package LinkedList;
+
 public interface LinkedListADT<T> {
  
     // Returns true if the linked list has no nodes, or false otherwise.

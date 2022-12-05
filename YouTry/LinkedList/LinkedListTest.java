@@ -1,4 +1,4 @@
-package LinkedList;
+
 import java.util.Scanner;
 
 class LinkedListTest {
