@@ -1,3 +1,5 @@
+package LinkedList;
+
 class LinkedList<T> implements LinkedListADT<T> {
     private ListNode<T> front = null;
     private int numberOfNodes = 0; 
@@ -41,7 +43,6 @@ class LinkedList<T> implements LinkedListADT<T> {
     // Removes a node from the front of the linked list (if there is one).
     // Returns a reference to the data in the first node, or null if the list is empty.
     @Override
-    @SuppressWarnings("unchecked")
     public T removeFirst() {
         T tempData;
         
@@ -55,7 +56,6 @@ class LinkedList<T> implements LinkedListADT<T> {
     }
 
     // Add an element to the end of the linked list
-    @SuppressWarnings("unchecked")
     public void addLast( T element ) {
         if (front == null) {
             front = new ListNode<T>(element, null);
@@ -71,7 +71,6 @@ class LinkedList<T> implements LinkedListADT<T> {
 
     // Returns true if the linked list contains a certain element, or false otherwise.
     @Override
-    @SuppressWarnings("unchecked")
     public boolean contains( T key ) {
         ListNode<T> searchNode;
         searchNode = front;
@@ -83,7 +82,6 @@ class LinkedList<T> implements LinkedListADT<T> {
     
     // Return String representation of the linked list.
     @Override
-    @SuppressWarnings("unchecked")
     public String toString() {
         ListNode<T> node;
         String linkedList = "FRONT ==> ";

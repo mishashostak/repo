@@ -1,3 +1,4 @@
+package Sorting;
 /**
  * This class is utilized for testing the speeds of different
  * sorting algorithms
