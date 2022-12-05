@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LinkedListTest",
+            "request": "launch",
+            "mainClass": "LinkedListTest",
+            "projectName": "repo-6_b17d5b6d"
+        },
+        {
+            "type": "java",
             "name": "Launch SortingTests",
             "request": "launch",
             "mainClass": "SortingTests",
