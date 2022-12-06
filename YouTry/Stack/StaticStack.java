@@ -87,21 +87,33 @@ class BracketCheck {
                 case '[': st.push(c); /*System.out.println(st);*/ break;
                 case '{': st.push(c); /*System.out.println(st);*/ break;
                 case ')': //System.out.println(st);
-                    if(st.peek() == '(') st.pop();
+                    if(st.peek() == null) {
+                        System.out.println("unbalanced");
+                        System.exit(0);
+                    }
+                    else if(st.peek() == '(') st.pop();
                     else {
                         System.out.println("unbalanced");
                         System.exit(0);
                     }
                     break;
                 case ']': //System.out.println(st);
-                    if(st.peek() == '[') st.pop();
+                    if(st.peek() == null) {
+                        System.out.println("unbalanced");
+                        System.exit(0);
+                    }
+                    else if(st.peek() == '[') st.pop();
                     else {
                         System.out.println("unbalanced");
                         System.exit(0);
                     }
                     break;
                 case '}': //System.out.println(st);
-                    if(st.peek() == '{') st.pop();
+                    if(st.peek() == null) {
+                        System.out.println("unbalanced");
+                        System.exit(0);
+                    }
+                    else if(st.peek() == '{') st.pop();
                     else {
                         System.out.println("unbalanced");
                         System.exit(0);
