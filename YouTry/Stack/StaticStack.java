@@ -81,30 +81,35 @@ class BracketCheck {
         StaticStack<Character> st = new StaticStack<>(input.length());
 
         for(char c : input.toCharArray()) {
+            //System.out.println(c);
             switch(c) {
-                case '(': st.push(c);
-                case '[': st.push(c);
-                case '{': st.push(c);
-                case ')':
+                case '(': st.push(c); /*System.out.println(st);*/ break;
+                case '[': st.push(c); /*System.out.println(st);*/ break;
+                case '{': st.push(c); /*System.out.println(st);*/ break;
+                case ')': //System.out.println(st);
                     if(st.peek() == '(') st.pop();
                     else {
                         System.out.println("unbalanced");
                         System.exit(0);
                     }
-                case ']':
+                    break;
+                case ']': //System.out.println(st);
                     if(st.peek() == '[') st.pop();
                     else {
                         System.out.println("unbalanced");
                         System.exit(0);
                     }
-                case '}':
+                    break;
+                case '}': //System.out.println(st);
                     if(st.peek() == '{') st.pop();
                     else {
                         System.out.println("unbalanced");
                         System.exit(0);
+                        break;
                     }
             }
         }
+        //System.out.println(st);
         if(st.isEmpty()) System.out.println("BALANCED");
         else System.out.println("unbalanced");
     }

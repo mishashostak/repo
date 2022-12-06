@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BracketCheck",
+            "request": "launch",
+            "mainClass": "Stack.BracketCheck",
+            "projectName": "repo-7_b17d5b6e"
+        },
+        {
+            "type": "java",
             "name": "Launch Potato",
             "request": "launch",
             "mainClass": "Queue.Potato",

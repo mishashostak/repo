@@ -1,4 +1,3 @@
-
 public class ListNode<T> {
     private T data;
     private ListNode<T> next;
