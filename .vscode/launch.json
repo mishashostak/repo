@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch FourOneN3",
+            "request": "launch",
+            "mainClass": "FourOneN3",
+            "projectName": "repo-2_259b941"
+        },
+        {
+            "type": "java",
             "name": "Launch BracketCheck",
             "request": "launch",
             "mainClass": "Stack.BracketCheck",
