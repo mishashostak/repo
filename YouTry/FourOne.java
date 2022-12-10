@@ -139,16 +139,23 @@ class CenterPattern extends JPanel {
 
         int w = getSize().width;
         int h = getSize().height;
+        int xIvl = w / 36;
+        //functions calculations assuming x-axis reflection to simulate standard lines
+        //effectively slope (m)
+        int m = h/w;
+        //additional b value necessary to apply when using in this context
 
-        //TBD TBD TBD
-
-        for (int luW = 0, luH = h; luW < w && luH > 0; luW += ivlWidth, luH -= ivlHeight) 
-            g.drawLine(0, luH, luW, 0);
-        for (int ldW = 0, ldH = 0; ldW < w && ldH < h; ldW += ivlWidth, ldH += ivlHeight) 
-            g.drawLine(0, ldH, ldW, h);
-        for (int ruW = 0, ruH = 0; ruW < w && ruH < h; ruW += ivlWidth, ruH += ivlHeight) 
-            g.drawLine(ruW, 0, w, ruH);
-        for (int rdW = 0, rdH = h; rdW < w && rdH > 0; rdW += ivlWidth, rdH -= ivlHeight) 
-            g.drawLine(rdW, h, w, rdH);
+        //fxPos lines [\] in array, [/] in graph
+        for (int x = 0; x < w; x += xIvl) 
+            g.drawLine(0, h, x, m * x);
+        for (int x = 0; x < w; x += xIvl) 
+            g.drawLine(w, 0, x, m * x);
+        //fxNeg lines [/] in array, [\] in graph
+        for (int x = w; x > 0; x -= xIvl) 
+            g.drawLine(0, 0, x, ((-m) * x) + h);
+        for (int x = w; x > 0; x -= xIvl) 
+            g.drawLine(w, h, x, ((-m) * x) + h);
+        g.drawLine(0, 0, w, h);
+        g.drawLine(0, h, w, 0);
     }
 }
