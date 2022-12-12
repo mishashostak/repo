@@ -2,35 +2,42 @@ import javax.swing.*;
 import java.awt.*;
  
 public class FourOneN3 {
+
     public static void main( String[] args ) {
         JFrame frame = new JFrame("your damn lines");
-        String inp = "";
-        String[] inpVals = new String[] {"1","2","3","4","5","6"};
+        String input = "";
 
-        while(!Arrays.asList(inpVals).contains(inp)) 
-        inp = JOptionPane.showInputDialog("1 for circle, 2 for rectangle, 3 for circular spiral,"
-            + "4 for rectangular spiral, 5 for four-corner pattern, 6 for center pattern");
-        
-        switch(inp) {
-            case "1":
+        while(!input.equals("1") && !input.equals("2") && !input.equals("3") && !input.equals("4") && !input.equals("5") && !input.equals("6"))
+            input = JOptionPane.showInputDialog("1 for circle, 2 for rectangle, 3 for circular spiral, "
+                + "4 for rectangular spiral, 5 for four-corner pattern, 6 for center pattern");
+
+        int n = Integer.parseInt(input);
+
+        switch(n) {
+            case 1:
                 Circ cir = new Circ();
                 frame.add(cir);
-            case "2":
+                break;
+            case 2:
                 Rect rec = new Rect();
                 frame.add(rec);
-            case "3":
+                break;
+            case 3:
                 CircSpir cirSp = new CircSpir();
                 frame.add(cirSp);
-            case "4":
+                break;
+            case 4:
                 RectSpir recSp = new RectSpir();
                 frame.add(recSp);
-            case "5":
+                break;
+            case 5:
                 FourCorner fourCorner = new FourCorner();
                 frame.add(fourCorner);
-            case "6":
+                break;
+            case 6:
                 CenterPattern centPat = new CenterPattern();
                 frame.add(centPat);
-            default: System.out.println("how did we get here?");
+                break;
         }
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(600, 600));
@@ -116,8 +123,8 @@ class FourCorner extends JPanel {
 
         int w = getSize().width;
         int h = getSize().height;
-        int ivlWidth = w / 12;
-        int ivlHeight = h / 12;
+        int ivlWidth = w / 36;
+        int ivlHeight = h / 36;
 
         for (int luW = 0, luH = h; luW < w && luH > 0; luW += ivlWidth, luH -= ivlHeight) 
             g.drawLine(0, luH, luW, 0);
@@ -155,7 +162,5 @@ class CenterPattern extends JPanel {
             g.drawLine(0, 0, x, ((-m) * x) + h);
         for (int x = w; x > 0; x -= xIvl) 
             g.drawLine(w, h, x, ((-m) * x) + h);
-        g.drawLine(0, 0, w, h);
-        g.drawLine(0, h, w, 0);
     }
 }
