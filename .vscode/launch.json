@@ -9,6 +9,13 @@
             "name": "Launch FourThree",
             "request": "launch",
             "mainClass": "FourThree",
+            "projectName": "repo-2_259b941"
+        },
+        {
+            "type": "java",
+            "name": "Launch FourThree",
+            "request": "launch",
+            "mainClass": "FourThree",
             "projectName": "repo_999ff6c4"
         },
         {
